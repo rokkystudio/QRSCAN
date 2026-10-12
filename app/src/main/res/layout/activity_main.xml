@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <badfox.logic.neoui.NeoTopBarView
+        android:id="@+id/appTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+    <FrameLayout
+        android:id="@+id/cameraRoot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.rokkystudio.qrscan.ScannerOverlayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/torchButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start|top"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_floating_button"
+            android:contentDescription="@string/torch_off"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_torch_off"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/permissionButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@null"
+            android:minHeight="50dp"
+            android:stateListAnimator="@null"
+            android:text="@string/camera_permission_button"
+            android:textAllCaps="false"
+            android:textColor="@color/action_button_text_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

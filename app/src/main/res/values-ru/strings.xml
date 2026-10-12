@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">QRSCAN</string>
+    <string name="app_subtitle">Сканер штрихкодов</string>
+    <string name="app_info_version">%1$s</string>
+    <string name="camera_permission_title">Доступ к камере</string>
+    <string name="camera_permission_missing">Для сканирования штрихкодов нужен доступ к камере.</string>
+    <string name="camera_permission_button">Разрешить камеру</string>
+    <string name="scanner_error">Ошибка сканера: %1$s</string>
+    <string name="scan_result_title">Результат сканирования</string>
+    <string name="copy">Копировать</string>
+    <string name="open">Открыть</string>
+    <string name="share">Поделиться</string>
+    <string name="copied">Скопировано в буфер обмена</string>
+    <string name="cannot_open">Нет приложения для открытия этого значения.</string>
+    <string name="torch_on">Фонарик включён</string>
+    <string name="torch_off">Фонарик выключен</string>
+    <string name="torch_unavailable">Фонарик недоступен</string>
+</resources>

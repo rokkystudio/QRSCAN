@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">QRSCAN</string>
+    <string name="app_subtitle">Barcode scanner</string>
+    <string name="app_info_version">%1$s</string>
+    <string name="camera_permission_title">Camera access</string>
+    <string name="camera_permission_missing">Camera permission is required to scan barcodes.</string>
+    <string name="camera_permission_button">Grant camera permission</string>
+    <string name="scanner_error">Scanner error: %1$s</string>
+    <string name="scan_result_title">Scan result</string>
+    <string name="copy">Copy</string>
+    <string name="open">Open</string>
+    <string name="share">Share</string>
+    <string name="copied">Copied to clipboard</string>
+    <string name="cannot_open">No app can open this value.</string>
+    <string name="torch_on">Flashlight on</string>
+    <string name="torch_off">Flashlight off</string>
+    <string name="torch_unavailable">Flashlight unavailable</string>
+</resources>

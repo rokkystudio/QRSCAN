@@ -1,0 +1,20 @@
+[versions]
+agp = "9.3.2"
+neoui = "1.0.11"
+activity = "1.11.0"
+appcompat = "1.8.0"
+camera = "1.6.2"
+mlkitBarcode = "17.3.0"
+
+[libraries]
+neoui = { module = "badfox.logic.sharedapp:neoui", version.ref = "neoui" }
+activity = { module = "androidx.activity:activity", version.ref = "activity" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+camera-core = { module = "androidx.camera:camera-core", version.ref = "camera" }
+camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "camera" }
+camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "camera" }
+camera-view = { module = "androidx.camera:camera-view", version.ref = "camera" }
+mlkit-barcode = { module = "com.google.mlkit:barcode-scanning", version.ref = "mlkitBarcode" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
