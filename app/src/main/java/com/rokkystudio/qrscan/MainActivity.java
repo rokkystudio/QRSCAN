@@ -42,6 +42,7 @@ import com.google.mlkit.vision.common.InputImage;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -198,8 +199,20 @@ public class MainActivity extends AppCompatActivity {
         return getPreferencesStore().getString(PREF_THEME, NeoThemeDefaults.DAY);
     }
 
+    /**
+     * Returns the persisted interface language. On first launch the supported system language
+     * is selected once and stored, so later system-language changes do not override it.
+     */
     private String getSavedLanguage() {
-        return getPreferencesStore().getString(PREF_LANGUAGE, "ru");
+        SharedPreferences preferences = getPreferencesStore();
+        String saved = preferences.getString(PREF_LANGUAGE, null);
+        if ("ru".equals(saved) || "en".equals(saved)) {
+            return saved;
+        }
+
+        String initial = "ru".equalsIgnoreCase(Locale.getDefault().getLanguage()) ? "ru" : "en";
+        preferences.edit().putString(PREF_LANGUAGE, initial).commit();
+        return initial;
     }
 
     private void saveString(String key, String value) {
