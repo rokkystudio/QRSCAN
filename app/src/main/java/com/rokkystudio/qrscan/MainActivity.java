@@ -50,6 +50,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import badfox.logic.neoui.NeoThemeDefaults;
 import badfox.logic.neoui.NeoTopBarView;
+import badfox.logic.neoui.NeoSystemBarInsetsKt;
 import kotlin.Unit;
 
 /**
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         applySavedUiSettings();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        NeoSystemBarInsetsKt.applyNeoSystemBarInsets(this, findViewById(android.R.id.content));
 
         cameraExecutor = Executors.newSingleThreadExecutor();
         barcodeScanner = BarcodeScanning.getClient(
